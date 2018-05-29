@@ -127,8 +127,7 @@ public class BasicPHUB {
 				}
 			}
 			
-			System.out.println(candidates.length);
-			System.out.println(concentradores.length);
+			
 			Node[] solucion = union(candidates,concentradores);
 					
 			int coste = funcion_objetivo(solucion);
@@ -161,12 +160,8 @@ public class BasicPHUB {
 	        for (Node t : nodeList) {
 	            if(!concentrator.contains(t)) {
 	            	intersection.add(t);
-	            	System.out.print(t.id+" ");
 	            }
-	            
-	            
 	        }
-	        System.out.println("");
 	        Collections.shuffle(intersection);
 	        return intersection.toArray(new Node[intersection.size()]);
 	}
